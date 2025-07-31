@@ -1,0 +1,93 @@
+/* style.css */
+
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+  
+  /* Container for the app */
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  
+  /* Headings */
+  h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  /* Input fields */
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px 0;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Output area */
+  .output {
+    margin-top: 25px;
+    padding: 15px;
+    background: #ecf0f1;
+    border-radius: 5px;
+    white-space: pre-wrap; /* preserve whitespace formatting */
+    font-family: monospace;
+    font-size: 15px;
+    color: #2c3e50;
+    min-height: 100px;
+  }
+  
+  /* Label styling */
+  label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    color: #34495e;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .container {
+      padding: 20px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
