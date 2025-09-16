@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //create a set
+        let email=new set([])
+        email.add("js@gmail.com");
+        email.add("java@gmail.com");
+        email.add("python@gmail.com");
+        console.log(email);
+        email.delete("js@gmail.com");
+        console.log(mail);
+        for(let mail of email){
+            console.log(mail)
+        }
+    email.array.forEach(element => {
+        console.log(mail)
+        
+    });
+    let adminpermission=new Set(["write","read","delete"]);
+    let userpermission=new Set(["read"]);
+    function haspermission(role,permission){   //user def fun
+        return role.has(permission);
+    }
+    console.log(haspermission(adminpermission,"delete"));
+    console.log(haspermission(userpermission,"delete"));
+//map
+let user1={name:"sri"}
+let user2={name:"harini"}
+let map=new Map()
+map.set(user1,"welcome")
+map.set(user2,"hi sri")
+console.log(map)
+map.delete(user2)
+console.log(map)
+for(let detail of map.values){
+    console.log(detail)
+}
+</script>
+</body>
+</html>
