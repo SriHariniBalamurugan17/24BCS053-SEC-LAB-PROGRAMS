@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        .slider {
+            margin: auto;
+            text-align: center;
+        }
+        .slider img {
+            width: 50%;
+            height: auto;
+            transition: opacity 0.5s ease-in-out;
+        }
+        button {
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <img src="./img1.jpg" alt="Slider Image" id="display-images">
+        <div>
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+
+    <script>
+        // Array to hold the image sources
+        let image = ["img1.jpg", "img2.jpg", "img3.jpg"];
+        
+        // Current index of the image
+        let currentIndex = 0;
+        
+        // Get the image element and buttons
+        let display = document.getElementById("display-images");
+        let prevBtn = document.getElementById("prev");
+        let nextBtn = document.getElementById("next");
+
+        // Event listener for the "Next" button
+        nextBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % image.length; 
+            display.src = image[currentIndex];  // Update the image source
+        });
+
+        // Event listener for the "Previous" button
+        prevBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + image.length) % image.length;  
+            display.src = image[currentIndex];  // Update the image source
+        });
+
+        // Automatic image slider every 2 seconds
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % image.length;  
+            display.src = image[currentIndex];  // Update the image source
+        }, 2000);
+    </script>
+</body>
+</html>
+/
